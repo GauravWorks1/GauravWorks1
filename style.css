@@ -18,7 +18,27 @@ body {
     z-index: 1000; /* Ensure navbar is on top */
 
 }
+.notice-container {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 55px; /* Adjust this value based on your navbar height */
+    animation: slideNotice 20s linear infinite; /* Adjust animation duration as needed */
+}
 
+.notice {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+@keyframes slideNotice {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
 .container {
     background-color: #ffffff;
     padding: 20px;
