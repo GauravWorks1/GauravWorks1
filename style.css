@@ -1,59 +1,64 @@
-/* Reset default browser styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* styles.css */
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2; /* Gray background */
+    background-color: #C2C4C5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure navbar is on top */
+
 }
 
-nav ul {
-    list-style-type: none;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-}
-
-nav ul li a:hover {
-    background-color: #555;
-}
-
-main {
-    max-width: 800px;
-    margin: 20px auto;
+.container {
+    background-color: #ffffff;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    margin: 20px auto; /* Center container */
+    text-align: center; /* Center text and form inside container */
 }
 
-section {
+h1 {
     margin-bottom: 20px;
 }
 
-section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+form {
+    width: 100%; /* Ensure form takes full width of container */
+    max-width: 400px; /* Limit maximum width of form */
+    margin: 0 auto; /* Center form horizontally */
 }
 
-section p {
-    line-height: 1.6;
+form .form-group {
+    margin-bottom: 15px;
 }
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.alert {
+    margin-top: 20px;
+}
+
+
