@@ -35,6 +35,15 @@ body {
     display: inline-block;
 }
 
+.marquee {
+    background-color: #007bff; /* Blue background */
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    animation: slideNotice 20s linear infinite; /* Adjust animation duration as needed */
+}
 @keyframes slideNotice {
     0% { transform: translateX(-100%); }
     100% { transform: translateX(100%); }
