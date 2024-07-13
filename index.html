@@ -47,7 +47,17 @@
         </form>
       </div>
     </nav>
+<div id="asura-content" class="tab-content">
+  <div class="iframe-container">
+    <iframe id="iframe-asura" src="asuracomics.html"></iframe>
+  </div>
+</div>
 
+<div id="abyss-content" class="tab-content">
+  <div class="iframe-container">
+    <iframe id="iframe-abyss" src="abyss.html"></iframe>
+  </div>
+</div>
     <div class="notice-container">
         <div class="marquee">
             <marquee behavior="scroll" direction="left">THIS IS JUST FOR PRACTICING AND TESTING MY WORKS (IT MIGHT HAVE THE CONTENTS WHICH DOSENT BELONG TO ME. THIS WILL BE MY PORTFOLIO KINDA THING IN FUTURE AND ALL THE OTHER THINGS WILL BE REMOVED INC. DISQUS AND ABYSS EXTERNAL LINKS </marquee>
@@ -105,6 +115,29 @@ function showTab(tabId) {
 }
 
 </script>
+    <script>
+  document.getElementById('asura-tab').addEventListener('click', function(e) {
+    e.preventDefault();
+    showTab('asura-content');
+    document.getElementById('iframe-asura').src = 'asuracomics.html'; // Update with your file name
+  });
+
+  document.getElementById('abyss-tab').addEventListener('click', function(e) {
+    e.preventDefault();
+    showTab('abyss-content');
+    document.getElementById('iframe-abyss').src = 'abyss.html'; // Update with your file name
+  });
+
+  function showTab(tabId) {
+    const tabs = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.classList.remove('active');
+    });
+    document.getElementById(tabId).classList.add('active');
+  }
+</script>
+
+    
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
   
