@@ -74,6 +74,36 @@
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
     })();
+
+  // Update showTab function to handle preserving state
+function showTab(tabId) {
+    const tabs = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+        tab.classList.remove('active');
+    });
+    const tabContent = document.getElementById(tabId);
+    tabContent.classList.add('active');
+
+    // Store scroll position before switching tabs
+    const iframe = tabContent.querySelector('iframe');
+    sessionStorage.setItem(tabId + '_scroll', iframe.contentWindow.pageYOffset);
+
+    // Load iframe source if not loaded already
+    if (!iframe.src) {
+        if (tabId === 'asura-content') {
+            iframe.src = 'asuracomics.html'; // Update with your iframe source
+        } else if (tabId === 'abyss-content') {
+            iframe.src = 'abyss.html'; // Update with your iframe source
+        }
+    }
+
+    // Restore scroll position after switching tabs
+    const scrollPosition = sessionStorage.getItem(tabId + '_scroll');
+    if (scrollPosition) {
+        iframe.contentWindow.scrollTo(0, scrollPosition);
+    }
+}
+
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
