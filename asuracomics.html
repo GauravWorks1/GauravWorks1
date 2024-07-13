@@ -66,6 +66,13 @@
     </div>
   </nav>
 
+       <script>
+        document.getElementById('asura-link').addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default link behavior
+            document.getElementById('iframe-content').src = 'https://asuracomic.net/'; // Set iframe source to the desired URL
+        });
+    </script>
+  
   <div class="iframe-container">
     <iframe src="https://asuracomic.net/" title="Asura Comics"></iframe>
   </div>
