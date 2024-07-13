@@ -1,42 +1,36 @@
 <!doctype html>
 <html lang="en">
   <head>
+     
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css}">
     <title>GauravWorks</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
-        margin: 0;
-        padding: 0;
-      }
-      .content {
-        padding: 20px;
-      }
-      .tab-content {
-        display: none;
-      }
-      .tab-content.active {
-        display: block;
-      }
-      iframe {
-        width: 100%;
-        height: 80vh;
-        border: none;
-      }
-      .navbar .nav-item .disclaimer {
-        display: none;
-      }
-      .navbar .nav-item:hover .disclaimer {
-        display: inline;
-      }
-      
+         body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .content {
+            padding: 20px;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        iframe {
+            width: 100%;
+            height: 80vh;
+            border: none;
+        }
     </style>
   </head>
   <body>
@@ -48,25 +42,25 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#" >Home</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://writerdash.blogspot.com/">Poems</a>
+            <a class="nav-link" href="https://writerdash.blogspot.com/">poems</a>
           </li>
+            <li class="nav-item">
+                      <a class="nav-link" href="#" id="asura-tab">AsuraScans</a>
+                </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" id="asura-tab">AsuraScans</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About me</a>
+            <a class="nav-link" href="#">About me </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="myprojects.html">My projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://thesigmas.blogspot.com/" data-toggle="tooltip" data-placement="bottom" title="This link does not belong to GauravWorks">Abyss</a>
+                    <a class="nav-link" href="https://thesigmas.blogspot.com/" data-toggle="tooltip" data-placement="bottom" title="This link does not belong to GauravWorks">Abyss</a>
             <span class="disclaimer">(This link does not belong to me)</span>
-          </li>
+                </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -76,29 +70,35 @@
     </nav>
 
     <div class="notice-container">
-      <marquee behavior="scroll" direction="left">THIS IS JUST FOR PRACTICING AND TESTING MY WORKS (IT MIGHT HAVE THE CONTENTS WHICH DOSENT BELONG TO ME. THIS WILL BE MY PORTFOLIO KINDA THING IN FUTURE AND ALL THE OTHER THINGS WILL BE REMOVED INC. DISQUS AND ABYSS EXTERNAL LINKS </marquee>
+        <div class="marquee">
+            <marquee behavior="scroll" direction="left">THIS IS JUST FOR PRACTICING AND TESTING MY WORKS (IT MIGHT HAVE THE CONTENTS WHICH DOSENT BELONG TO ME. THIS WILL BE MY PORTFOLIO KINDA THING IN FUTURE AND ALL THE OTHER THINGS WILL BE REMOVED INC. DISQUS AND ABYSS EXTERNAL LINKS </marquee>
+        </div>
     </div>
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://anonymous-9zjigzhxeq.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-    <div class="content">
-      <div id="home-content" class="tab-content active">
-        <h1>Welcome to GauravWorks</h1>
-        <p>More content will be updated soon.</p>
-      </div>
-      <div id="asura-content" class="tab-content">
-        <iframe id="iframe-asura" src="https://asuracomic.net/"></iframe>
-      </div>
-    </div>
+    <div id="asura-content" class="tab-content">
+            <iframe id="iframe-asura" src="https://asuracomic.net/"></iframe>
+        </div>
 
-    <div id="disqus_thread"></div>
-    <script>
-      (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://anonymous-9zjigzhxeq.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-      })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -106,25 +106,27 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <script>
-      document.getElementById('home-tab').addEventListener('click', function(e) {
-        e.preventDefault();
-        showTab('home-content');
-      });
-
-      document.getElementById('asura-tab').addEventListener('click', function(e) {
-        e.preventDefault();
-        showTab('asura-content');
-        document.getElementById('iframe-asura').src = 'https://asuracomic.net/';
-      });
-
-      function showTab(tabId) {
-        const tabs = document.querySelectorAll('.tab-content');
-        tabs.forEach(tab => {
-          tab.classList.remove('active');
+         <script>
+        document.getElementById('home-tab').addEventListener('click', function(e) {
+            e.preventDefault();
+            showTab('home-content');
         });
-        document.getElementById(tabId).classList.add('active');
-      }
+
+        document.getElementById('asura-tab').addEventListener('click', function(e) {
+            e.preventDefault();
+            showTab('asura-content');
+            document.getElementById('iframe-asura').src = 'https://asuracomic.net/';
+        });
+
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+        }
     </script>
+
+    
   </body>
 </html>
