@@ -10,28 +10,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="style.css}">
     <title>GauravWorks</title>
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-  }
-  .iframe-container {
-    position: absolute;
-    top: 56px; /* Height of the navbar */
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: calc(100vh - 56px); /* Full height minus navbar height */
-  }
-  .iframe-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-</style>
 
   </head>
   <body>
@@ -50,7 +28,7 @@
             <a class="nav-link" href="https://writerdash.blogspot.com/">poems</a>
           </li>
            <li class="nav-item">
-  <a class="nav-link" href="asuracomics.html">Asura comics</a>
+  <a class="nav-link" href="asuracomics.html">Asura Comics</a>
 </li>
           <li class="nav-item">
             <a class="nav-link" href="#">About me </a>
@@ -96,60 +74,7 @@
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
     })();
-
-  // Update showTab function to handle preserving state
-function showTab(tabId) {
-    const tabs = document.querySelectorAll('.tab-content');
-    tabs.forEach(tab => {
-        tab.classList.remove('active');
-    });
-    const tabContent = document.getElementById(tabId);
-    tabContent.classList.add('active');
-
-    // Store scroll position before switching tabs
-    const iframe = tabContent.querySelector('iframe');
-    sessionStorage.setItem(tabId + '_scroll', iframe.contentWindow.pageYOffset);
-
-    // Load iframe source if not loaded already
-    if (!iframe.src) {
-        if (tabId === 'asura-content') {
-            iframe.src = 'asuracomics.html'; // Update with your iframe source
-        } else if (tabId === 'abyss-content') {
-            iframe.src = 'abyss.html'; // Update with your iframe source
-        }
-    }
-
-    // Restore scroll position after switching tabs
-    const scrollPosition = sessionStorage.getItem(tabId + '_scroll');
-    if (scrollPosition) {
-        iframe.contentWindow.scrollTo(0, scrollPosition);
-    }
-}
-
 </script>
-    <script>
-  document.getElementById('asura-tab').addEventListener('click', function(e) {
-    e.preventDefault();
-    showTab('asura-content');
-    document.getElementById('iframe-asura').src = 'asuracomics.html'; // Update with your file name
-  });
-
-  document.getElementById('abyss-tab').addEventListener('click', function(e) {
-    e.preventDefault();
-    showTab('abyss-content');
-    document.getElementById('iframe-abyss').src = 'abyss.html'; // Update with your file name
-  });
-
-  function showTab(tabId) {
-    const tabs = document.querySelectorAll('.tab-content');
-    tabs.forEach(tab => {
-      tab.classList.remove('active');
-    });
-    document.getElementById(tabId).classList.add('active');
-  }
-</script>
-
-    
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
   
